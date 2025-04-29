@@ -1,0 +1,224 @@
+html {
+    height: 100%;
+}
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fond général avec image fixe */
+body {
+    background-image: url('bonne_photo.jpg'); /* ton image de fond */
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-clip: border-box;
+    background-color: #000; /* backup noir si image charge pas */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Conteneur principal avec fond gris foncé semi-transparent */
+main {
+    background-color: rgba(51, 51, 51, 0.9); /* gris foncé avec transparence */
+    padding: 40px 20px;
+    border-radius: 10px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+/* Header */
+header {
+    background-color: rgba(51, 51, 51, 0.9); /* même effet semi-transparent */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 3px solid #1f4e94;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    background-color: #1f4e94; /* bleu bouton */
+    padding: 10px 15px;
+    border-radius: 12px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #3b6db1;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Titres */
+h2 {
+    color: #fff;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #1f4e94;
+    padding-bottom: 5px;
+}
+
+h3 {
+        color: #3498db; /* ton bleu principal */
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-size: 1.8em;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* ombre très légère pour contraster */
+}
+
+
+/* Paragraphes et listes */
+p, li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #eee;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    border-top: 3px solid #1f4e94;
+}
+
+/* Responsive : Media Queries */
+@media screen and (max-width: 768px) {
+    nav ul {
+        text-align: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav ul li a {
+        display: block;
+        width: 80%;
+        margin: 5px auto;
+        text-align: center;
+    }
+}
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.sticker {
+    width: 50px;
+    height: auto;
+}
+
+/* Harmoniser toutes les images */
+figure img, article img {
+    display: block;
+    margin: 20px auto;
+    width: 300px; /* même taille pour toutes */
+    height: auto;
+    border: 5px solid #1f4e94; /* cadre bleu */
+    border-radius: 12px; /* angles arrondis */
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.5); /* légère ombre */
+}
+
+/* Corriger le fond pour qu'il suive jusqu'à la fin */
+body {
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* Conteneur de l'iframe pour garder un rapport d'aspect */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 Aspect ratio (hauteur / largeur * 100) */
+    overflow: hidden;
+}
+
+/* Iframe à 100% du conteneur */
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Media queries pour ajuster l'iframe sur les petits écrans */
+@media screen and (max-width: 768px) {
+    .iframe-container {
+        padding-bottom: 75%; /* Ajuste le rapport d'aspect si nécessaire */
+    }
+}
+
+/* Style des liens dans la liste */
+a {
+    color: orange; /* Liens en blanc par défaut */
+    text-decoration: none; /* Retirer le soulignement */
+}
+
+/* Changer la couleur des liens au survol */
+a:hover {
+    color: #1f4e94; /* Couleur bleue au survol */
+    text-decoration: underline; /* Souligner le lien au survol */
+}
+
